@@ -1,0 +1,357 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    background-repeat: no-repeat;
+}
+
+.attribution
+{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+    margin-top: 10vh;
+}
+
+#blackBg
+{
+    display: none;
+    margin: 0;
+    height: 99.9vh;
+    width: 98.9vw;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: -3vh;
+    z-index: 90;
+    position: absolute;
+}
+
+#scoreCanvas
+{
+    width: 750px;
+    height: 165px;
+    background-color: transparent;
+    border: 3px solid white;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 8px;
+    margin-top: 2vh;
+}
+
+@font-face {
+    font-family: barlowBold;
+    src: url("Barlow_Semi_Condensed/BarlowSemiCondensed-Bold.ttf");
+}
+
+@font-face {
+    font-family: semiBold;
+    src: url("Barlow_Semi_Condensed/BarlowSemiCondensed-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: regularBarlow;
+    src: url('Barlow_Semi_Condensed/BarlowSemiCondensed-Regular.ttf');
+}
+
+#title
+{
+    color: white;
+    font-family: barlowBold;
+    margin-top: 1vh;
+    margin-left: 2vw;
+}
+
+#scoreContainer
+{
+    background-color: white;
+    border-radius: 6px;
+    width: 180px;
+    height: 130px;
+    float: right;
+    margin-top: -20vh;
+    margin-right: 2vw;
+    text-align: center;
+}
+
+#scoreContainer p
+{
+    color: hsl(229, 64%, 46%);
+    font-family: semiBold;
+    margin-top: 2vh;
+    letter-spacing: 2px;
+}
+
+#scoreContainer h1
+{
+    color: hsl(229, 25%, 31%);
+    font-family: barlowBold;
+    font-size: 4em;
+    margin-top: -3vh;
+}
+
+#gameContainer
+{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: 18vh;
+}
+
+#paperContainer
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 360px;
+    background: radial-gradient(circle, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    margin-top: -45vh;
+    margin-left: 38vw;
+}
+
+#scissorsContainer
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 360px;
+    background: radial-gradient(circle, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+    margin-top: -45vh;
+    margin-left: 53vw;
+}
+
+#rockContainer
+{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 360px;
+    background: radial-gradient(circle, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+    margin-top: -18vh;
+    margin-left: 45vw;
+}
+
+#rulesBtn
+{
+    background-color: transparent;
+    border-color: white;
+    border: 1px solid;
+    width: 120px;
+    height: 40px;
+    color: white;
+    text-align: center;
+    border-radius: 6px;
+    position: relative;
+    float: right;
+    margin-top: 3.8vh;
+    margin-right: 3vw;
+}
+
+
+#rulesContainer
+{
+    display: none;
+    width: 385px;
+    height: 385px;
+    background-color: white;
+    border-radius: 6px;
+    position: absolute;
+    margin-left: 37vw;
+    margin-right: auto;
+    margin-top: 20vh;
+    z-index: 900;
+}
+
+#rulesContainer h3
+{
+    color: hsl(229, 25%, 31%);
+    font-family: barlowBold;
+    margin-left: 8%;
+    margin-top: 7%;
+    position: absolute;
+}
+
+#rulesImages
+{
+    margin-top: 23%;
+    margin-left: 12%;
+}
+
+#closeBtn
+{
+    position: absolute;
+    margin-left: 22vw;
+    margin-top: 5vh;
+}
+
+#pickedTitle
+{
+    color: white;
+    font-family: semiBold;
+    margin-left: 30vw;
+    margin-top: 10vh;
+}
+
+#houseTitle
+{
+    color: white;
+    font-family: semiBold;
+    margin-left: 57vw;
+    margin-top: -5vh;
+}
+
+#gamePlayContainer
+{
+    display: none;
+}
+
+.cardHolder
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 200px;
+    height: 200px;
+    border-radius: 360px;
+}
+
+#playerCardHolder
+{
+    margin-left: 27vw;
+    margin-top: 5vh;
+}
+
+#houseCardHolder
+{
+    margin-left: 58vw;
+    margin-top: -27vh;
+}
+
+#chosenButton
+{
+    margin-top: 10vh;
+}
+
+#playerContainer
+{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 360px;
+    background: radial-gradient(circle, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    z-index: 40;
+}
+
+.cardHolder .box
+{
+    width: 550px;
+    height: 550px;
+    display: none;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    margin-top: -25vh;
+    margin-left: -11.5vw;
+    z-index: 39;
+}
+
+.cardHolder .box span
+{
+    position: absolute;
+    box-sizing: border-box;
+    background-color: #eaeaea71;
+    border-radius: 50%;
+    animation: ripple-animation 2.5s linear;
+    animation-delay: calc(0.3s * var(--i));
+    z-index: 38;
+}
+
+
+@keyframes ripple-animation {
+    0%
+    {
+        width: 0px;
+        height: 0px;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        width: 550px;
+        height: 550px;
+        opacity: 0;
+    }
+}
+
+#playerContainer button
+{
+    transform: scale(1.4);
+    margin-left: 1.7vw;
+    margin-top: 6vh;
+}
+
+#houseContainer
+{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 360px;
+    background: radial-gradient(circle, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+    z-index: 40;
+}
+
+#houseContainer button
+{
+    transform: scale(1.4);
+    margin-left: 1.7vw;
+    margin-top: 6vh;
+}
+
+.gameBtn
+{
+    background-color: white;
+    border-radius: 360px;
+    width: 115px;
+    height: 115px;
+    margin-top: 2.5vh;
+    border: none;
+}
+
+#gameOver
+{
+    display: none;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
+    margin-top: -20vh;
+}
+
+#gameOver h1
+{
+    color: white;
+    margin-left: -5vh;
+    font-family: semiBold;
+}
+
+#gameOver button
+{
+    color: red;
+    width: 170px;
+    height: 40px;
+    border-radius: 6px;
+    font-family: semiBold;
+    margin-left: -5vh;
+    border: none;
+}
